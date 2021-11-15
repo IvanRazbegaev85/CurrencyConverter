@@ -59,7 +59,6 @@ convertBtn.addEventListener('click', async () => {
     const rates = await getExchangeRates();
 
     amountConverted.value = (rates.to[0].mid).toFixed(3);
-    currencyValueInput.value = (rates.from);
 
     for (const [key, value] of Object.entries(currencies)){
         if(rates.to[0].quotecurrency === key){
